@@ -1,5 +1,6 @@
 
 
+
 function $(selector) {
 const self = {
 element: document.querySelector(selector),
@@ -25,6 +26,9 @@ self.element.style.color = color;
 txtSize:(size)=> {
 self.element.style.fontSize = size;
 },
+txt:(text)=> {
+self.element.innerHTML = text;
+},
 }
 
 return self;
@@ -43,6 +47,7 @@ $('p').show();
 $('p').color('blue');
 sIze += 10
 $('p').txtSize(sIze + 'px');
+$('p').txt('paragraph(p) p-a-r-a-g-r-a-p-h');
 });
 
 $('h4').attr('className', 'classy');
