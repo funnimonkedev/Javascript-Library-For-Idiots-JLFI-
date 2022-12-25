@@ -1,6 +1,7 @@
 
 
 
+
 function $(selector) {
 const self = {
 element: document.querySelector(selector),
@@ -29,6 +30,9 @@ self.element.style.fontSize = size;
 txt:(text)=> {
 self.element.innerHTML = text;
 },
+create:(element, text)=> {
+var para = document.createElement(element); para.innerText = text; document.body.appendChild(para);
+},
 }
 
 return self;
@@ -37,7 +41,7 @@ return self;
 
 //examples
 let sIze = 30;
-
+$('p').create('button', 'hello'); //the selector $(selector) does not matter in this function just put something they're
 $('p').on('click',function() {
 $('p').hide();
 });
