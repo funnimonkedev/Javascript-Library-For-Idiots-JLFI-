@@ -1,8 +1,6 @@
 
 
 
-
-
 function $(selector) {
 const self = {
 element: document.querySelector(selector), //selects the element defined
@@ -32,10 +30,13 @@ txt:(text)=> {
 self.element.innerHTML = text; //self explanatory
 },
 create:(element, text)=> {
-var para = document.createElement(element); para.innerText = text; document.body.appendChild(para); // the 'var para' is supposed to be the method 'document.createElement'
+ var para = document.createElement(element); para.innerText = text; document.body.appendChild(para); // the 'var para' is supposed to be the method 'document.createElement'
 },
 replacePage:(value)=> {
 document.write(value);
+},
+regrets:(value)=> {
+ if (value == 'none') alert('yessir my fello bro')
 },
 }
 
@@ -51,7 +52,7 @@ $('p').hide();
 });
 
 $('h5').on('click',function() {
-$().replacePage('<h1> hello </h1>'); //the selector $(selector) does not matter in this function just put something their or (preferably) put nothing
+$().replacePage('<h1> hello </h1>'); //(You don't have to type anything in the replace page constructor box just type '' or "") the selector $(selector) does not matter in this function just put something their or (preferably) put nothing
 });
 
 $('h1').on('click', function() {
@@ -63,3 +64,4 @@ $('p').txt('paragraph(p) p-a-r-a-g-r-a-p-h');
 });
 
 $('h4').attr('className', 'classy');
+$().regrets('none');
