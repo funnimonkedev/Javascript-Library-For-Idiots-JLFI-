@@ -1,6 +1,4 @@
 
-
-
 function $(selector) {
 const self = {
 element: document.querySelector(selector), //selects the element defined
@@ -42,26 +40,7 @@ regrets:(value)=> {
 
 return self;
 }
+function $reverseStr(str)  {
+return str.split("").reverse().join("");
+}
 
-
-//examples
-let sIze = 30;
-$().create('button', 'hello'); //the selector $(selector) does not matter in this function just put something their or (preferably) put nothing
-$('p').on('click',function() {
-$('p').hide();
-});
-
-$('h5').on('click',function() {
-$().replacePage('<h1> hello </h1>'); //(You don't have to type anything in the replace page constructor box just type '' or "") the selector $(selector) does not matter in this function just put something their or (preferably) put nothing
-});
-
-$('h1').on('click', function() {
-$('p').show();
-$('p').color('blue');
-sIze += 10
-$('p').txtSize(sIze + 'px');
-$('p').txt('paragraph(p) p-a-r-a-g-r-a-p-h');
-});
-
-$('h4').attr('className', 'classy');
-$().regrets('none');
