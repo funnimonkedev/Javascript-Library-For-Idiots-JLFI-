@@ -47,3 +47,6 @@ function $lex(str){
       return item.trim() //convert code to seperated parts(extremely useful at times)
     })
 }
+function $lex2(str){
+    return str.split(' '); //doesnt map instead reverses (simple to understand, easy to use)
+}
