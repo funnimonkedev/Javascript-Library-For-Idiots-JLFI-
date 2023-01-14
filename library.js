@@ -1,4 +1,3 @@
-
 function $(selector) {
 const self = {
 element: document.querySelector(selector), //selects the element defined
@@ -42,4 +41,9 @@ return self;
 }
 function $reverseStr(str)  {
 return str.split("").reverse().join("");
+}
+function $lex(str){
+    return str.split(' ').map(item => {
+      return item.trim() //convert code to seperated parts(extremely useful at times)
+    })
 }
