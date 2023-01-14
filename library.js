@@ -36,11 +36,10 @@ document.write(value);
 regrets:(value)=> {
  if (value == 'none') alert('yessir my fello bro')
 },
+delete: document.querySelector(selector).remove(), //had to do it this way to not have it be a function, don't ask.
 }
-
 return self;
 }
 function $reverseStr(str)  {
 return str.split("").reverse().join("");
 }
-
